@@ -1,48 +1,68 @@
 ﻿@{
     ViewBag.Title = "Login";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-4">
-            <form>
-                <div class="text-center mb-4">
-                    <img class="mb-4" src="~/Content/Images/foodLogo.png" alt="" width="72" height="72">
-                    <h1 class="h3 mb-3 font-weight-normal"><i class="fa fa-user"></i>Login UI</h1>
+
+    <div class="mt-4 mb-4 row justify-content-center">
+        <form class="col-sm-3">
+            <div class="text-center mb-4">
+                <img class="mb-4" src="~/Content/Images/foodLogo.png" alt="" width="72" height="72">
+                <div class="border-bottom">
+                    <h1 class="h3 mb-3 font-weight-normal"><i class="fa fa-user"></i> &nbsp; Login UI</h1>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                        </div>
-                        <input class="form-control" type="text" placeholder="Email address" required autofocus>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                     </div>
+                    <input type="text" class="form-control" placeholder="Email address" required autofocus>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-key"></i></span>
-                        </div>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                    </div>  
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
                 </div>
+            </div>
 
-                <div class="checkbox mb-3">
-                     <label>
-                         <input type="checkbox" value="remember-me"> Remember me
-                     </label>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Sign In</button>
+
+            <div class="row mt-3 mb-3">
+                <div class="col-md-6">
+                    <p class="text-info text-left">Forgot Password?</p>
                 </div>
-            
-                <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+                <div class="col-md-6">
+                    <p class="text-info text-right">Sign Up</p>
+                </div>
+            </div>
 
-                <p class="mt-5 mb-3 text-muted text-center">Forgot Password?</p>
-                <p class="mt-5 mb-3 text-muted text-center">Or you can login with</p>
+            <p class="text-muted text-center mb-3">Or you can login with</p>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <i class="fa fa-google fa-2x"></i>
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-github fa-2x"></i>
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-linkedin fa-2x"></i>
+                </div>
+                <div class="col-md-3">
+                    <i class="fa fa-facebook-official fa-2x"></i>
+                </div>
+            </div>
 
-            </form>
-        </div>
+        </form>
     </div>
-</div>
+
