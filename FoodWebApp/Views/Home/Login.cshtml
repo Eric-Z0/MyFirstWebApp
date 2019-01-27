@@ -5,31 +5,44 @@
 <h3>@ViewBag.Message</h3>
 
 <div class="container">
-    <form class="form-signin">
-        <div class="text-center mb-4">
-            <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
-        </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-4">
+            <form>
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="~/Content/Images/foodLogo.png" alt="" width="72" height="72">
+                    <h1 class="h3 mb-3 font-weight-normal"><i class="fa fa-user"></i>Login UI</h1>
+                </div>
 
-        <div class="form-label-group">
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputEmail">Email address</label>
-        </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Email address" required autofocus>
+                    </div>
+                </div>
 
-        <div class="form-label-group">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <label for="inputPassword">Password</label>
-        </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-key"></i></span>
+                        </div>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    </div>  
+                </div>
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
-    </form>
+                <div class="checkbox mb-3">
+                     <label>
+                         <input type="checkbox" value="remember-me"> Remember me
+                     </label>
+                </div>
+            
+                <button class="btn btn-primary btn-block" type="submit">Sign in</button>
 
-    <p>Forget Password?</p>
-    <p>Or you can login with</p>
+                <p class="mt-5 mb-3 text-muted text-center">Forgot Password?</p>
+                <p class="mt-5 mb-3 text-muted text-center">Or you can login with</p>
+
+            </form>
+        </div>
+    </div>
 </div>
