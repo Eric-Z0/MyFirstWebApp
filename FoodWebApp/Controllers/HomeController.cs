@@ -34,6 +34,13 @@ namespace FoodWebApp.Controllers
             return View();
         }
 
+        public ActionResult MyProfile()
+        {
+            ViewBag.Message = "My Profile Page.";
+
+            return View();
+        }
+
         public ActionResult Login()
         {
             ViewBag.Message = "My Login Page.";

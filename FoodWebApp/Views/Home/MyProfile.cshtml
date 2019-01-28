@@ -1,0 +1,78 @@
+﻿
+<div class="container-fluid mt-4 mb-5">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <img src="~/Content/Images/PusheenCat_02.jpg" alt="profile image" class="img-thumbnail mb-3">
+                <a href="#" class="list-group-item list-group-item-action active"><i class="fa fa-address-card fa-2x"></i>&nbsp; Profile</a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-bar-chart fa-2x"></i>&nbsp; Statistics</a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-comments fa-2x"></i>&nbsp; Messages</a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fa fa-newspaper-o fa-2x"></i>&nbsp; News
+                    <span class="badge badge-primary badge-pill float-right">3</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-cog fa-2x"></i>&nbsp; Settings</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <!-- Any module declared here should be dynamically created by either JQeury / AJAX or other techniques-->
+            <div style="position:relative">
+                <img class="img-thumbnail mb-3" src="~/Content/Images/pano_01.jpg" alt="Background image" style="height:285px">
+                <!--inline style is not good, I will move the css code to a specific file later on-->
+                <i class="fa fa-camera fa-lg" style="position:absolute;left:5%;top:10%;color:white;opacity:0.3"></i>
+            </div>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-activities-tab" data-toggle="tab" href="#nav-activities" role="tab" aria-controls="nav-activities" aria-selected="false">Activities</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-activities" role="tabpanel" aria-labelledby="nav-activities-tab">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <textarea rows="4" class="form-control col-md-12" placeholder="What is in your mind today?"></textarea>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <i class="fa fa-camera-retro fa-2x mr-3"></i>
+                            <i class="fa fa-film fa-2x mr-3"></i>
+                            <i class="fa fa-map-marker fa-2x"></i>
+                            <a href="#" class="btn btn-info float-right">Post</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="card mt-4">
+                        <h5 class="card-header">My Book</h5>
+                        <div class="card-body">
+                            <p>My Favorite Music List</p>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <h5 class="card-header">My Music</h5>
+                        <div class="card-body">
+                            <p>My Favorite Music List</p>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <h5 class="card-header">Personal Information</h5>
+                        <div class="card-body">
+                            <table class="table table-borderless table-hover">
+                                <tbody>
+                                    <tr><td>User Name:</td></tr>
+                                    <tr><td>Phone:</td></tr>
+                                    <tr><td>Email:</td></tr>
+                                    <tr><td>Address:</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
