@@ -160,10 +160,13 @@
     <Content Include="Content\carousel.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\explorer_bg_01.jpg" />
+    <Content Include="Content\Images\explorer_bg_02.jpg" />
     <Content Include="Content\Images\foodLogo.png" />
     <Content Include="Content\Images\Food_Streets_01.jpg" />
     <Content Include="Content\Images\Food_Streets_02.jpg" />
     <Content Include="Content\Images\Food_Streets_03.jpg" />
+    <Content Include="Content\Images\Montreal_Night_01.jpg" />
     <Content Include="Content\Images\pano_01.jpg" />
     <Content Include="Content\Images\PusheenCat_01.png" />
     <Content Include="Content\Images\PusheenCat_02.jpg" />
@@ -238,8 +241,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Message.cshtml" />
-    <Content Include="Views\Home\Weather.cshtml" />
-    <Content Include="Views\Home\MAP.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Signup.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />

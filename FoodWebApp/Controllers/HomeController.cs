@@ -20,20 +20,6 @@ namespace FoodWebApp.Controllers
             return View();
         }
 
-        public ActionResult MAP()
-        {
-            ViewBag.Message = "My MAP Page.";
-
-            return View();
-        }
-
-        public ActionResult Weather()
-        {
-            ViewBag.Message = "My Weather Page.";
-
-            return View();
-        }
-
         public ActionResult MyProfile()
         {
             ViewBag.Message = "My Profile Page.";
