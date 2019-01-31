@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Diagnostics;
 using System.Web.Mvc;
+using FoodWebApp.DB_Service;
+using FoodWebApp.Models;
 
 namespace FoodWebApp.Controllers
 {
@@ -34,11 +34,38 @@ namespace FoodWebApp.Controllers
             return View();
         }
 
-        public ActionResult Signup()
+        public ActionResult SignUp()
         {
-            ViewBag.Message = "My Signup Page.";
+            ViewBag.Message = "User SignUp Page.";
 
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SignUp(UserModel user)
+        {
+            // The reason the request is validated the second time is because the front-end validation can be spoofed under special situation
+            if (ModelState.IsValid)
+            {
+                // For test purpose
+                Debug.WriteLine("UserName: {0}", user.UserName, null);
+                Debug.WriteLine("UserPWD: {0}", user.Password, null);
+                Debug.WriteLine("Email: {0}", user.EmailAddress, null);
+
+                UserService userService = new UserService();
+                var userList = userService.Get();
+                foreach (object data in userList) {
+                    Debug.WriteLine(data);
+                }
+
+                userService.Create(user);
+
+                return RedirectToAction("Index");
+            }
+            else {
+                return View();
+            }
         }
     }
 }
