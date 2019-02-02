@@ -23,80 +23,88 @@
 
 @model FoodWebApp.Models.UserModel
 
-<div class="mt-4 mb-5 row justify-content-center">
-    @*<form class="col-sm-3" asp-action="SignupRazor" asp-controller="HomeController" method="post">*@
-    @using (Html.BeginForm("SignUp", "Home", FormMethod.Post, new { @class = "col-sm-3" })){
+<div class="row bg-light text-center p-5">
+    <div class="col-md-7 mb-5 px-0">
+        <img src="~/Content/Images/christmas tree.jpg" style="width:100%;object-fit:cover;height:555px" alt="SignUpImage" />
+    </div>
+    <div class="col-md-5 mb-5 px-0">
+        @*<form class="col-sm-3" asp-action="SignupRazor" asp-controller="HomeController" method="post">*@
+        @using (Html.BeginForm("SignUp", "Home", FormMethod.Post, new { @class = "row px-5 mx-0 bg-white" }))
+        {
+            <div class="col-md-10 offset-1">
+                @Html.AntiForgeryToken()
 
-        @Html.AntiForgeryToken()
-
-        <div class="text-center mb-4">
-            <img src="~/Content/Images/logo-tree-png-1.png" alt="" width="100" height="100" >
-        </div>
-
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-user-circle-o"></i></span>
+                <div class="mb-4 pt-3">
+                    <img src="~/Content/Images/logo-tree-png-1.png" alt="" width="100" height="100">
                 </div>
-                <input type="text" class="form-control" name="UserName" placeholder="Username" required>
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                <div class="container">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user-circle-o"></i></span>
+                            </div>
+                            <input type="text" class="form-control" name="UserName" placeholder="Username" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input id="pass" type="password" class="form-control" name="Password" placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input data-toggle="popover" data-placement="bottom" id="cpass" type="password" class="form-control" name="ConfirmPassword" placeholder="Confirm password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" name="EmailAddress" placeholder="Email address" required>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block mt-4 mb-3" type="submit">Sign Up</button>
                 </div>
-                <input id="pass" type="password" class="form-control" name="Password" placeholder="Password" required>
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                <p class="text-center mt-3 text-muted">Have an account?<a class="ml-2" href="#">Sign In</a></p>
+                <p class="text-muted text-center mb-3">or you can sign in with</p>
+
+                <div class="row text-center pb-4">
+                    <div class="col-md-3">
+                        <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#5a5a5a'">
+                            <i class="fa fa-google fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#dc3545'" onmouseout="this.style.color='#5a5a5a'">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#17a2b8'" onmouseout="this.style.color='#5a5a5a'">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#5a5a5a'">
+                            <i class="fa fa-facebook-official fa-2x"></i>
+                        </a>
+                    </div>
                 </div>
-                <input data-toggle="popover" data-placement="bottom" id="cpass" type="password" class="form-control" name="ConfirmPassword" placeholder="Confirm password" required>
             </div>
-        </div>
-
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                </div>
-                <input type="email" class="form-control" name="EmailAddress" placeholder="Email address" required>
-            </div>
-        </div>
-
-        <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
-
-        <p class="text-muted text-center mt-3">Have an account? Sign In</p>
-
-        <p class="text-muted text-center mb-3">or you can sign in with</p>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#007bff'" onmouseout="this.style.color='#5a5a5a'">
-                    <i class="fa fa-google fa-2x"></i>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#dc3545'" onmouseout="this.style.color='#5a5a5a'">
-                    <i class="fa fa-github fa-2x"></i>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#17a2b8'" onmouseout="this.style.color='#5a5a5a'">
-                    <i class="fa fa-linkedin fa-2x"></i>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="#" style="color:#5a5a5a" onmouseover="this.style.color='#0000FF'" onmouseout="this.style.color='#5a5a5a'">
-                    <i class="fa fa-facebook-official fa-2x"></i>
-                </a>
-            </div>
-        </div>
-    }
-    @*</form>*@
+        }
+        @*</form>*@
+    </div>
 </div>
-

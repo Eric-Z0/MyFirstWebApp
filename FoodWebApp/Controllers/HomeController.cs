@@ -1,15 +1,28 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using FoodWebApp.DB_Service;
 using FoodWebApp.Models;
+using FoodWebApp.WebAPI;
 
 namespace FoodWebApp.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private async Task LoadLocation()
         {
+            var location = await LocationProcessor.LoadLocation();
+
+            Debug.WriteLine("Current Country: {0}", location.Country, null);
+            Debug.WriteLine("Current City: {0}", location.City, null);
+        }
+
+        public async Task<ActionResult> Index()
+        {
+            LocationAPIHelper.InitializeClient();
+            await LoadLocation();
+            //WeatherAPIHelper.InitializeClient();
             return View();
         }
 
