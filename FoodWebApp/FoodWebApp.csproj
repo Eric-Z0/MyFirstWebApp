@@ -193,6 +193,8 @@
     <Compile Include="WebAPI\LocationModel.cs" />
     <Compile Include="WebAPI\LocationProcessor.cs" />
     <Compile Include="WebAPI\WeatherAPIHelper.cs" />
+    <Compile Include="WebAPI\WeatherModel.cs" />
+    <Compile Include="WebAPI\WeatherProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -206,22 +208,23 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Images\chocolate-garden.jpg" />
     <Content Include="Content\Images\christmas tree.jpg" />
+    <Content Include="Content\Images\city-park.png" />
     <Content Include="Content\Images\explorer_bg_01.jpg" />
     <Content Include="Content\Images\explorer_bg_02.jpg" />
-    <Content Include="Content\Images\Food_Streets_01.jpg" />
-    <Content Include="Content\Images\Food_Streets_02.jpg" />
-    <Content Include="Content\Images\Food_Streets_03.jpg" />
     <Content Include="Content\Images\Keukenhof-Lisse-The-Netherlands-2.jpg" />
     <Content Include="Content\Images\lighthouse_02.png" />
     <Content Include="Content\Images\logo-tree-png-1.png" />
     <Content Include="Content\Images\Montreal_Night_01.jpg" />
+    <Content Include="Content\Images\Montreal_Night_02.jpg" />
     <Content Include="Content\Images\Ontwerpen.png" />
     <Content Include="Content\Images\orange_tree_logo.png" />
     <Content Include="Content\Images\pano_01.jpg" />
     <Content Include="Content\Images\PusheenCat_01.png" />
     <Content Include="Content\Images\PusheenCat_02.jpg" />
     <Content Include="Content\Images\pusheen_bg.jpg" />
+    <Content Include="Content\Images\Tree-Logo-for-Law-Firm.jpg" />
     <Content Include="Content\Images\unicorn_01.png" />
+    <Content Include="Content\Images\volcano.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
@@ -305,7 +308,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Home\MyProfile.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

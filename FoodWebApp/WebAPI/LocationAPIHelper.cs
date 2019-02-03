@@ -16,7 +16,7 @@ namespace FoodWebApp.WebAPI
         {
             locationAPIClient = new HttpClient();
             // Set the base url address
-            locationAPIClient.BaseAddress = new Uri("https://weather-ydn-yql.media.yahoo.com/forecastrss");
+            locationAPIClient.BaseAddress = new Uri("http://ip-api.com/json");
             locationAPIClient.DefaultRequestHeaders.Accept.Clear();
             // Add a header which requests JSON type data
             locationAPIClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
