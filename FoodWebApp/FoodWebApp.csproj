@@ -192,6 +192,9 @@
     <Compile Include="WebAPI\LocationAPIHelper.cs" />
     <Compile Include="WebAPI\LocationModel.cs" />
     <Compile Include="WebAPI\LocationProcessor.cs" />
+    <Compile Include="WebAPI\NewsAPIHelper.cs" />
+    <Compile Include="WebAPI\NewsModel.cs" />
+    <Compile Include="WebAPI\NewsProcessor.cs" />
     <Compile Include="WebAPI\WeatherAPIHelper.cs" />
     <Compile Include="WebAPI\WeatherModel.cs" />
     <Compile Include="WebAPI\WeatherProcessor.cs" />
@@ -213,7 +216,6 @@
     <Content Include="Content\Images\explorer_bg_02.jpg" />
     <Content Include="Content\Images\Keukenhof-Lisse-The-Netherlands-2.jpg" />
     <Content Include="Content\Images\lighthouse_02.png" />
-    <Content Include="Content\Images\logo-tree-png-1.png" />
     <Content Include="Content\Images\Montreal_Night_01.jpg" />
     <Content Include="Content\Images\Montreal_Night_02.jpg" />
     <Content Include="Content\Images\Ontwerpen.png" />
@@ -222,6 +224,7 @@
     <Content Include="Content\Images\PusheenCat_01.png" />
     <Content Include="Content\Images\PusheenCat_02.jpg" />
     <Content Include="Content\Images\pusheen_bg.jpg" />
+    <Content Include="Content\Images\tree-logo-default-card.jpg" />
     <Content Include="Content\Images\Tree-Logo-for-Law-Firm.jpg" />
     <Content Include="Content\Images\unicorn_01.png" />
     <Content Include="Content\Images\volcano.jpg" />

@@ -14,9 +14,10 @@ namespace FoodWebApp.Controllers
         {
             var location = await LocationProcessor.LoadLocation();
 
-            Debug.WriteLine("Current Country: {0}", location.Country, null);
-            Debug.WriteLine("Current CountryCode: {0}", location.CountryCode, null);
-            Debug.WriteLine("Current City: {0}", location.City, null);
+            // For Testing Purpose
+            //Debug.WriteLine("Current Country: {0}", location.Country, null);
+            //Debug.WriteLine("Current CountryCode: {0}", location.CountryCode, null);
+            //Debug.WriteLine("Current City: {0}", location.City, null);
 
             // Call LoadWeather API here
             await LoadWeather(location.City, location.CountryCode);
@@ -26,19 +27,34 @@ namespace FoodWebApp.Controllers
         {
             var weather = await WeatherProcessor.LoadWeather(City, CountryCode);
 
+            // For Testing Purpose
             //Debug.WriteLine("WeatherObj-attr: {0}", weather.Humidity, null);
-            Debug.WriteLine("Weather Con: {0}", weather.WeatherStates[0].Main, null);
-            Debug.WriteLine("Temp: {0}", weather.WeatherData.Temp, null);
-            Debug.WriteLine("Humidity: {0}", weather.WeatherData.Humidity, null);
-            Debug.WriteLine("Temp Min: {0}", weather.WeatherData.TempMin, null);
-            Debug.WriteLine("Temp Max: {0}", weather.WeatherData.TempMax, null);
+            //Debug.WriteLine("Weather Con: {0}", weather.WeatherStates[0].Main, null);
+            //Debug.WriteLine("Temp: {0}", weather.WeatherData.Temp, null);
+            //Debug.WriteLine("Humidity: {0}", weather.WeatherData.Humidity, null);
+            //Debug.WriteLine("Temp Min: {0}", weather.WeatherData.TempMin, null);
+            //Debug.WriteLine("Temp Max: {0}", weather.WeatherData.TempMax, null);
+        }
+
+        public async Task<JsonResult> LoadNews()
+        {
+            var news = await NewsProcessor.LoadNews();
+            return Json(news, JsonRequestBehavior.AllowGet);
+
+            //for (int index = 0; index < 3; index++) {
+            //    Debug.WriteLine("News Author: {0}", news.Articles[index].Author, null);
+            //    Debug.WriteLine("News Title: {0}", news.Articles[index].Title, null);
+            //}
         }
 
         public async Task<ActionResult> Index()
         {
-            LocationAPIHelper.InitializeClient();
-            WeatherAPIHelper.InitializeClient();
-            await LoadLocation();
+            //LocationAPIHelper.InitializeClient();
+            //WeatherAPIHelper.InitializeClient();
+            //await LoadLocation();
+
+            NewsAPIHelper.InitializeClient();
+            //await LoadNews();
 
             return View();
         }
